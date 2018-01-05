@@ -1,0 +1,14 @@
+div {
+   margin: 0;
+   padding: 0;
+}
+
+p {
+   text-align: center;
+   padding: 3rem 0rem;
+   background-color: indianred;
+   border: 2px inset darkred;
+   font-size: 1.5rem;
+   font-weight: bold;
+   color: black;
+}
