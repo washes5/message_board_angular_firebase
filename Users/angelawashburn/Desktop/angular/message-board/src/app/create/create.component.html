@@ -1,3 +1,18 @@
-<p>
-  create works!
-</p>
+<div class="container">
+
+
+  <h1>Create a new message</h1>
+  
+  <!-- Title field -->
+  <label for="titleInput">Title:</label>
+  <input placeholder="Title" id="titleInput" autofocus [formControl]="newMessageTitleFormControl" [(ngModel)]="newMessageTitle" (keyup.enter)="createMessage()">
+  
+  <br>
+  
+  <!-- Content field -->
+  <label for="contentInput">Content:</label>
+  <textarea placeholder="Content" id="contentInput" [formControl]="newMessageContentFormControl" [(ngModel)]="newMessageContent" (keyup.enter)="createMessage()"></textarea>
+ 
+ <button (click)="createMessage()">Submit</button>
+ </div>
+ 
