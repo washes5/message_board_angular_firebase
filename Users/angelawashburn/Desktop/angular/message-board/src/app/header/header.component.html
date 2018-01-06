@@ -23,9 +23,9 @@
        
             <!-- Buttons on right side of navbar -->
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="#">Register</a></li>
-              <li><a href="#">Login</a></li>
-              <li><a href="#">Logout</a></li>
+              <li *ngIf="!nameToDisplay"><a (click)="login()">Register</a></li>
+              <li *ngIf="!nameToDisplay"><a (click)="login()">Login</a></li>
+              <li *ngIf="nameToDisplay"><a (click)="logout()">Logout of {{nameToDisplay}}</a></li>
             </ul>
        
           </div>
