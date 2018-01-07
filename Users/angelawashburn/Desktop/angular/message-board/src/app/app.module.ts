@@ -3,6 +3,9 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+import { AngularFireModule, FirebaseAppConfig } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
@@ -24,6 +27,15 @@ const routes: Routes = [
   }
 ];
 
+const firebaseConfig = {
+  apiKey: "AIzaSyC5kjzKHNoBAMtzjQbVUriSZRLRCFyT13o",
+  authDomain: "message-board-ecddd.firebaseapp.com",
+  databaseURL: "https://message-board-ecddd.firebaseio.com",
+  projectId: "message-board-ecddd",
+  storageBucket: "",
+  messagingSenderId: "588731945261"
+};
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +48,9 @@ const routes: Routes = [
     BrowserModule,
     RouterModule.forRoot(routes),
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule
   ],
   providers: [],
   bootstrap: [AppComponent]
