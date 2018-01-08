@@ -1,3 +1,11 @@
-<p>
-  home works!
-</p>
+<div class="container">
+
+  <h2>Message Board</h2>
+
+  <p *ngFor="let message of allMessagesArray" class="eachMessage">
+    <strong>{{ message.title }}</strong>
+    <br>
+    {{ message.content }}
+  </p>
+
+</div>

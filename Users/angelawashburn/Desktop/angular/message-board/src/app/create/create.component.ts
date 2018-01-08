@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { MessagesService } from '../services/messages.service';
 
 @Component({
   selector: 'app-create',
@@ -12,7 +13,7 @@ export class CreateComponent implements OnInit {
   newMessageContent = '';
   newMessageContentFormControl = new FormControl();
   
-  constructor() { }
+  constructor(private messageService: MessagesService) { }
 
   ngOnInit() {
   }
@@ -23,9 +24,8 @@ export class CreateComponent implements OnInit {
       return;
     }
     // Send the form off to Firebase.
-    // TO DO
-    // TO DO
-    // TO DO
+    this.messageService.postMessage(this.newMessageTitle, this.newMessageContent);
+  
     console.log('Form contents are:');
     console.log(this.newMessageTitle);
     console.log(this.newMessageContent);

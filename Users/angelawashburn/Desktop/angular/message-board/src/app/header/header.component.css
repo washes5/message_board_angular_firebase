@@ -1,0 +1,12 @@
+.eachMessage{
+    border: 2px inset gray;
+    margin: 1rem;
+    padding: 1rem;
+    color: black;
+    background-color: lightcoral;
+ }
+ 
+ .eachMessage:last-of-type{
+    margin-bottom: 5rem;
+ }
+ 
